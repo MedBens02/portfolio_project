@@ -1,0 +1,78 @@
+
+.form-group output {
+	margin-left: 5%;
+	width: 50%;
+	font-weight: bold;
+	color: var(--third-color);
+}
+
+.contn span {
+	color: var(--third-color);
+}
+
+.chat {
+
+}
+
+.msg-block {
+	width: 95%;
+	margin: 10px;
+}
+.sent-msg {
+	border: 1px solid var(--fourth-color);
+    border-radius: 4px;
+	background-color: var(--main-color);
+	padding: 10px;
+	margin-left: 60%;
+	overflow-wrap: break-word;
+}
+
+.time_stamp{
+	font-size: 10px;
+	text-align: right;
+}
+.broadcast {
+  border: 1px solid var(--fourth-color);
+  border-radius: 4px;
+  background-color: var(--main-color);
+  padding: 10px;
+}
+
+
+.received-msg {
+	border: 1px solid var(--fourth-color);
+    border-radius: 4px;
+	background-color: var(--main-color);
+	padding: 10px;
+	margin-right: 60%;
+	margin-left: 3%;
+}
+
+
+.tables-two-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-column: content-start / content-end;
+    grid-row: content-two-start / content-two-end;
+}
+.chat-box {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+    overflow-y: auto;
+	border: 1px solid var(--fourth-color);
+    border-radius: 4px;
+    max-height: 350px;
+    width: 95%;
+    margin: 20px;
+}
+
+.form-input {
+	width: 60%;
+}
+
+.form-group label {
+	width: 5%;
+}

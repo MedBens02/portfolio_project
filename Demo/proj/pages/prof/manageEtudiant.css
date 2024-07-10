@@ -1,0 +1,126 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-columns: [start sidebar-start] 1fr 
+        [sidebar-end content-start] 4fr [content-end];
+    grid-template-rows: [start header-start] auto [header-end content-start] 
+        1fr [content-end content-two-start] auto [content-two-end footer-start]
+        auto [footer-end];
+    gap: 20px;
+    padding: 20px;
+    overflow: auto; 
+    height: 100vh;
+    min-height: 800px;
+    min-width: 1000px;
+
+}
+
+.side-nav {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--second-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    grid-column: sidebar-start / sidebar-end;
+    grid-row: start / content-two-end;
+    overflow-y: auto;
+    max-height: 100%;
+
+}
+
+.table-wrapper {
+    margin-top: 10px;
+    max-height: 48vh; 
+    overflow-y: auto;
+}
+
+.form-group {
+    margin: 15px;
+    position: relative; /* Position the error message relative to its parent .form-group */
+}
+.form-group label {
+    display: inline-block;
+    margin-left: 5%;
+    width: 10%;
+    color: var(--fourth-color);
+    font-weight: 600;
+}
+
+
+.form-input {
+    width: 40%;
+    margin-right: 15%; 
+    background-color: var(--main-color);
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid var(--fourth-color);
+    border-radius: 4px;
+}
+
+
+/* Set widths for each type of column */
+th:nth-child(1), td:nth-child(1) { width: 5%; } /* ID */
+th:nth-child(2), td:nth-child(2) { width: 10%; } /* Name */
+th:nth-child(3), td:nth-child(3) { width: 10%; } /* First Name */
+th:nth-child(4), td:nth-child(4) { width: 25%; } /* Email */
+th:nth-child(5), td:nth-child(5) { width: 20%; } /* Address */
+th:nth-child(6), td:nth-child(6) { width: 30%; } /* Address */
+
+.check-table th:nth-child(1), .check-table td:nth-child(1) { width: 5%; }
+.check-table th:nth-child(2), .check-table td:nth-child(2) { width: 5%; }
+.check-table th:nth-child(3), .check-table td:nth-child(3) { width: 10%; }
+.check-table th:nth-child(4), .check-table td:nth-child(4) { width: 10%; }
+.check-table th:nth-child(5), .check-table td:nth-child(5) { width: 25%; }
+
+.error-alert {
+    background-color: #ffcccc;
+    color: #cc0000;
+    border: 1px solid #cc0000;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.success-alert {
+    background-color: var(--main-color);
+    color: var(--fourth-color);
+    border: 1px solid var(--fourth-color);
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.remove-enrollment {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.remove-enrollment:hover {
+    background-color: #f8d7da; /* Light red background on hover */
+    border-radius: 50%; /* Circular background on hover */
+}
+
+.form-input {
+    color: var(--fourth-color);
+    font-weight: bold;
+}
+
+.notif {
+    color: red;
+    font-weight: bold;
+}

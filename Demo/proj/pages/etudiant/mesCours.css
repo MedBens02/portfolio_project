@@ -1,0 +1,154 @@
+body {
+    grid-template-columns: [start sidebar-start] 1fr 
+        [sidebar-end content-start] 4fr [end content-end];
+    grid-template-rows: [start header-start] 1fr [header-end content-start] 
+        2fr [content-end content-two-start] 6fr [content-two-end footer-start]
+        auto [end footer-end];
+}
+
+
+.tables-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-column: content-start / content-end;
+    grid-row: content-start / content-end;
+}
+.tables-mid-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-column: content-start / content-end;
+    grid-row: content-mid-start / content-mid-start;
+}
+.tables-two-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-column: content-start / content-end;
+    grid-row: content-two-start / content-two-end;
+}
+
+.table-wrapper {
+    max-height: 350px; 
+    overflow-y: auto;
+}
+
+/* Register form CSS */
+
+
+.form-group {
+    margin: 15px;
+    position: relative; /* Position the error message relative to its parent .form-group */
+}
+.form-group label {
+    display: inline-block;
+    margin-left: 3%;
+    width: 12%;
+    color: var(--fourth-color);
+    font-weight: 600;
+}
+
+
+.form-input {
+    width: 40%;
+    margin-left: 5%; 
+    background-color: var(--main-color);
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid var(--fourth-color);
+    border-radius: 4px;
+    color: var(--fourth-color);
+    font-weight: bold;
+}
+
+
+.error-message {
+    color: #ff0000;
+    font-size: 0.8rem;
+    margin-left: 21%;
+    display: block; /* Make the error message a block-level element */
+    margin-top: 5px; /* Add some space between the input field and the error message */
+}
+
+.error-alert {
+    background-color: #ffcccc;
+    color: #cc0000;
+    border: 1px solid #cc0000;
+    border-radius: 4px;
+    padding: 10px;
+    margin-left: 21%; 
+    margin-right: 20%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.buttonAdd {
+    margin-left: 5%;
+}
+
+.success-alert {
+    background-color: var(--main-color);
+    color: var(--fourth-color);
+    border: 1px solid var(--fourth-color);
+    border-radius: 4px;
+    padding: 10px;
+    margin-left: 21%; 
+    margin-right: 20%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.pdf-input {
+    width: 40%;
+    margin-left: 5%; 
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid var(--fourth-color);
+    border-radius: 4px;
+}
+
+
+.part-item {
+    padding: 10px;
+    padding-left: 0;
+    margin-left: 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.part-item h4 {
+    color: var(--fourth-color);
+    display: inline-block;
+    width: 50%;
+}
+
+.part-item button {
+    width: auto;
+    margin: 0;
+}
+
+.view-flag {
+    margin-left: 2vw;
+}
+
+
+.remove-part {
+    margin-right: 10px;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.remove-part:hover {
+    background-color: #f8d7da; /* Light red background on hover */
+    border-radius: 50%; /* Circular background on hover */
+}

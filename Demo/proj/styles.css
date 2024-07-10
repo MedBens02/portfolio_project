@@ -1,0 +1,66 @@
+    :root {
+        --main-color: #CDE8E5;
+        --second-color: #EEF7FF;
+        --third-color: #7AB2B2;
+        --fourth-color: #4D869C;
+
+        /* Blue and white */
+
+        --main-color: #DBE2EF;
+        --second-color: #F9F7F7;
+        --third-color: #3F72AF;
+        --fourth-color: #112D4E;
+
+
+        --main-dark-color: #003C43;
+        --second-dark-color: #135D66;
+        --third-dark-color: #77B0AA;
+        --fourth-dark-color: #E3FEF7;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: var(--main-color);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background: var(--second-color);
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    h1 {
+        color: var(--fourth-color);
+    }
+
+    p {
+        color: var(--fourth-color);
+    }
+
+    .buttons {
+        margin-top: 20px;
+    }
+
+    .button {
+        background-color: var(--third-color);
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 10px;
+        border-radius: 5px;
+        display: inline-block;
+        transition: background-color 0.3s;
+    }
+
+    .button:hover {
+        background-color: var(--main-color);
+        color: var(--fourth-color);
+    }

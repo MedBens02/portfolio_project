@@ -1,0 +1,17 @@
+.tables-cont {
+    grid-row: content-start / content-two-end;
+}
+
+
+.table-wrapper {
+    max-height: 55vh;
+    margin-top: 10px;
+    overflow-y: auto;
+}
+
+/* Set widths for each type of column */
+th:nth-child(1), td:nth-child(1) { width: 5%; } /* ID */
+th:nth-child(2), td:nth-child(2) { width: 15%; } /* nom cours */
+th:nth-child(3), td:nth-child(3) { width: 25%; } /* Desc */
+th:nth-child(4), td:nth-child(4) { width: 10%; } /* ID prof */
+th:nth-child(5), td:nth-child(5) { width: 20%; } /* Action */

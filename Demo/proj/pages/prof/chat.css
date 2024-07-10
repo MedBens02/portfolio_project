@@ -1,0 +1,75 @@
+body {
+    grid-template-columns: [start sidebar-start] 1fr 
+        [sidebar-end content-start] 4fr [end content-end];
+    grid-template-rows: [start header-start] 1fr [header-end content-start] 
+        2fr [content-end content-two-start] 5fr [content-two-end footer-start]
+        auto [end footer-end];
+}
+
+.form-group output {
+  margin-left: 5%;
+  width: 50%;
+  font-weight: bold;
+  color: var(--third-color);
+}
+
+.contn span {
+  color: var(--third-color);
+}
+
+
+.msg-block {
+	width: 95%;
+	margin: 10px;
+}
+.sent-msg {
+	border: 1px solid var(--fourth-color);
+	border-radius: 4px;
+	background-color: var(--main-color);
+	padding: 10px;
+	margin-left: 60%;
+	overflow-wrap: break-word;
+}
+
+.time_stamp{
+	font-size: 10px;
+	text-align: right;
+}
+.broadcast {
+  border: 1px solid var(--fourth-color);
+  border-radius: 4px;
+  background-color: var(--main-color);
+  padding: 10px;
+}
+
+.received-msg {
+  border: 1px solid var(--fourth-color);
+  border-radius: 4px;
+  background-color: var(--main-color);
+  padding: 10px;
+  margin-right: 60%;
+  margin-left: 3%;
+}
+
+
+.chat-box {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  border: 1px solid var(--fourth-color);
+  border-radius: 4px;
+  max-height: 320px;
+  width: 95%;
+  margin: 20px;
+}
+
+.form-input {
+  width: 50%;
+  margin-left: 5%;
+}
+
+.form-group label {
+  width: 5%;
+}

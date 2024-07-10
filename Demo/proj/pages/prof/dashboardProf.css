@@ -1,0 +1,258 @@
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #CDE8E5;
+    --second-color: #EEF7FF;
+    --third-color: #7AB2B2;
+    --fourth-color: #4D869C;
+
+    /* Blue and white */
+
+    --main-color: #DBE2EF;
+    --second-color: #F9F7F7;
+    --third-color: #3F72AF;
+    --fourth-color: #112D4E;
+
+
+    --main-dark-color: #003C43;
+    --second-dark-color: #135D66;
+    --third-dark-color: #77B0AA;
+    --fourth-dark-color: #E3FEF7;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-columns: [start sidebar-start] 1fr 
+        [sidebar-end content-start] 4fr [end content-end];
+    grid-template-rows: [start header-start] 1fr [header-end content-start] 
+        4fr [content-end content-two-start] 4fr [content-two-end footer-start]
+        auto [end footer-end];
+    gap: 20px;
+    padding: 20px;
+    overflow: auto; 
+    height: 100vh;
+    min-height: 800px;
+    min-width: 1000px;
+
+}
+
+h1, h2 {
+    color: var(--fourth-color);
+}
+
+.footer {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    grid-column: sidebar-start / content-end;
+    grid-row: footer-start / end;
+    display: flex;
+    justify-content: center;  /* Horizontally center the content */
+    align-items: center;      /* Vertically center the content */
+    grid-row: footer-start / footer-end;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px; /* Optional: Add padding for better spacing */
+    width: 100%; /* Ensure the footer takes the full width of its container */
+    background-color: var(--second-color); /* Optional: Background color */
+    color: var(--main-dark-color); /* Optional: Text color */
+}
+
+.dash-title {
+    padding: 20px;
+    grid-column: content-start / end;
+    grid-row: start / header-end;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.tables-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-column: content-start / content-end;
+    grid-row: content-start / content-two-start;
+}
+.tables-two-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-column: content-start / content-end;
+    grid-row: content-two-start / content-two-end;
+}
+
+.contn {
+    height: 100%;
+    background: var(--second-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+/* Side Navigation Styles */
+.side-nav {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--second-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    grid-column: sidebar-start / sidebar-end;
+    grid-row: start / content-two-end;
+    overflow-y: auto;
+    max-height: 100%;
+}
+.side-nav h2 {
+    padding-top: 15px;
+    color: var(--fourth-color);
+    font-size: 28px;
+}
+.side-nav h3 {
+    padding-top: 15px;
+    color: var(--third-color);
+    font-size: 18px;
+}
+
+.side-nav h4 {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    opacity: 60%;
+    color: var(--third-color)
+}
+
+.side-nav img {
+    margin-top: 30px;
+    max-width: 100%;
+    width: 70%;
+}
+
+.side-nav a span {
+    font-weight: 800;
+    color: red;
+}
+
+.table-wrapper {
+    max-height: 25vh;
+    margin-top: 10px;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Set widths for each type of column */
+th:nth-child(1), td:nth-child(1) { width: 5%; } /* ID */
+th:nth-child(2), td:nth-child(2) { width: 15%; } /* Name */
+th:nth-child(3), td:nth-child(3) { width: 15%; } /* First Name */
+th:nth-child(4), td:nth-child(4) { width: 25%; } /* Email */
+th:nth-child(5), td:nth-child(5) { width: 20%; } /* Address */
+
+.course-table th:nth-child(3), .course-table td:nth-child(3) {
+    width: 45%;
+}
+.course-table th:nth-child(4), .course-table td:nth-child(4) {
+    width: 15%;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    color: var(--second-color);
+    background-color: var(--fourth-color);
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    color: white;
+    background-color: var(--fourth-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+
+.buttonAdd {
+    margin-top: 15px;
+    width: auto;
+    font-size: 15px;
+    font-weight: 800;
+    background-color: var(--third-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttonAdd:hover {
+    background-color: var(--main-color);
+    color: var(--fourth-color)
+}
+
+.disconnectBtn {
+    padding: 5px 10px;
+    height: 30px;
+    font-weight: 800;
+    color: white;
+    background-color: var(--fourth-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.disconnectBtn:hover {
+    background-color: darkred;
+}
+
+.side-nav a {
+    border-radius: 8px;
+    padding: 6px 8px 6px 8px;
+    margin-top: 13px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--fourth-color);
+    display: block;
+}
+/* Style for selected link */
+.side-nav a.selected {
+    background-color: var(--third-color);
+    color: var(--second-color);
+}
+
+.side-nav a:hover {
+    background-color: var(--main-color);
+    color: var(--second-color)
+}
+
+.side-nav img:hover {
+    opacity: 60%;
+    cursor: pointer;
+}
