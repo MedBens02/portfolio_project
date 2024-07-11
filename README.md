@@ -5,7 +5,7 @@
 E-tude is a customizable digital school platform solution designed for schools and universities. It allows educational institutions to create and manage their own digital learning environments. This repository includes the landing page for E-tude and a demo directory with an example of an educational platform.
 
 [Deployed Site](https://github.com/MedBens02/Web_proj)  
-[Final Project Blog Article](https://www.your-blog-article.com)  
+[Final Project Blog Article]([https://www.your-blog-article.com](https://medium.com/@medbens/e-tude-transforming-education-for-the-digital-age-a4c3be99268a))  
 [Author's LinkedIn](https://www.linkedin.com/in/mohamedbensaddik/)
 
 ## Installation
